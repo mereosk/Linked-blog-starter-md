@@ -1,9 +1,9 @@
-## Lab assignment 1 - Exercise 1
+/## Lab assignment 1 - Exercise 1
 2025-09-06 17:46
 
 Status: #10/10
 
-Tags: [[Machine_learning_for_human_vision_and_language]] [[Mnist]] [[Artificial_intelligence]]
+Tags: [[Machine_learning_for_human_vision_and_language]] [[Mnist]] [[Artificial_intelligence]] [[University]]
 
 
 - Sodjamts Enkhbat 1860666

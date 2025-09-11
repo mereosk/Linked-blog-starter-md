@@ -31,7 +31,8 @@ git merge feature/dialog-baselines
 git branch -d feature/dialog-baselines # local branch
 git push origin --delete feature/dialog-beaselines # remote branch
 ```
-
+**6 Push the changes**
+   ```git push origin main```
 ## Reference
 
 [github tutorial](https://www.atlassian.com/git/tutorials/advanced-overview)

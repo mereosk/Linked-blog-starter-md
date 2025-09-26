@@ -24,5 +24,11 @@ Or
 Word2Vec
 
 	folder E2.1a.zip
+
+Wordtovec
+
+## Exercise 2
+
+
 	
 ## Reference

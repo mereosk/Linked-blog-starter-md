@@ -1,4 +1,4 @@
-/## Lab assignment 1 - Exercise 1
+## Lab assignment 1 - Exercise 1
 2025-09-06 17:46
 
 Status: #10/10
@@ -33,6 +33,9 @@ Figure 1 - Handwritten check
 2. It would **digitize history.** Find *trends* in economic data that are always hard-written. Furthermore, it would make historic data more accessible for scientists, such as dates, census books, or tax rolls from the past.
 3. Last but not least, it is very important in **postal services**, since their scanners need to process millions of ZIP codes and street numbers and sort them *instantly* and *correctly*.
 
+What is the worst of all of these?
+
+
 ## Loss and accuracy
 
 | Loss  | Accuracy | Meaning                                   |
@@ -66,7 +69,9 @@ Figure 2 - Training and validation graphs of Multi-layer perception MLP
 
 For **hand written checks** as well as **zip codes and house numbers** we believe that a 92% efficiency is insufficient. Even, a small error in the amount of a check could be catastrophic. Similarly, in postal services, if a zip code's letter is misinterpreted by the network, mail may not reach its intended destination. However, all of these could be mitigated by error detectors or human verification.
 
-On the other hand, digitizing historical data is not a critical tasks, thus we believe that 92% is generally sufficient for this purpose
+On the other hand, digitizing historical data is not a critical tasks, thus we believe that 92% is generally sufficient for this purpose.
+
+(How many numbers in ZIP code 0.92^4 70% correct) again for the bank accounts
 
 > **A model generalizes well when it performs similarly on training and unseen data.**
 
@@ -80,6 +85,7 @@ On the other hand, digitizing historical data is not a critical tasks, thus we b
 - Even if we stack multiple linear layers on top of each other, this ends up reducing to a single linear transformation, essentially unable to learn non-linear relationships. 
 - Therefore, the model is only good at representing linearly separable functions. To truly be able to generalize well on unseen data, the neural network needs at least one hidden layer with non-linear activation.
 - ReLU allows the model to learn non-linearity from the dataset making it more resistance to correlation within the data.
+(Why is missing ?? what the problem is. with  alinear active. for every pixel in the pixel . If it is handwritten its naver gonna make the transformation. Through away the info about space)
 
 ## Question 5
 
@@ -107,7 +113,7 @@ Lets highlight the key differences:
 - 👎For the **checks** lets take 1000 sample amounts, even 13 of them being wrong there is a huge problem, thus I firmly believe that without a human supervisor or an extremely advanced error prevention system, the network shouldn't be used.
 - ✔️ As for the **historical data,** I already gave the pass to the previous model with 92% accuracy.
 - ✔️ **Postal codes and house numbers:** Accuracy is sufficient for reliable automatic sorting, with **error-correcting systems** catching rare mistakes.
-
+(Again little calculations)
 ## Question 7
 
 > In comparison to the previous (convolutional) model: 
@@ -122,9 +128,11 @@ Figure 5 - Running times - Upper CNN without dropout and lower
 ![[Pasted image 20250908012343.png]]
 Figure 6 - Training and validation graphs CNN without dropout(upper 2) & with dropout
 
-1. To answer the first question, we trained the model it google colab but used the CPU instead of some GPU. As we can clearly see in the figure 5 all the times of each epoch were faster without the dropout, except that of the 5th epoch. That could be due to the fact that by using dropout there are fewer neurons, since the network drops some randomly
+1. To answer the first question, we trained the model it google colab but used the CPU instead of some GPU. As we can clearly see in the figure 5 all the times of each epoch were faster without the dropout, except that of the 5th epoch. That could be due to the fact that by using dropout there are fewer neurons, since the network drops some randomly (WRONG)
 2. From the graphs, we can observe that the **training curves are very similar**, with the main difference being that the CNN **without dropout** reaches higher accuracy and lower loss. This shows that using dropout **sacrifices some training accuracy**. However, the **validation curves converge to better values**, and they are consistently higher than the training metrics, indicating that the model **generalizes better**.
 3. Overall, the dropout model **generalized much better**. By artificially introducing randomness, dropout forced the network to learn more robust patterns instead of **memorizing** training examples. The result was a model that sacrificed a little training accuracy but achieved higher and more stable validation performance. As a result, this model that not only achieves a **99%** test accuracy but also never sees its training accuracy exceed that of validation or test sets is arguably the best model at generalizing to unseen data.
++ validation accuracy
+
 ## Reference
 
 [[Lab-1-ml-for-human-vision.pdf]]
